@@ -1,0 +1,12 @@
+TEMPO 120
+TIME 4/4
+KEY Bb
+INSTRUMENT Piano
+TITLE "Oda a la Alegría"
+Bb5 E
+R Q
+[C4 E4 G4] Q
+REPEAT 2 {
+MARK intro
+GOTO intro
+}
