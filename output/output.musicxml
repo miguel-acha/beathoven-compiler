@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE score-partwise PUBLIC "-//Recordare//DTD MusicXML 3.1 Partwise//EN"
+  "http://www.musicxml.org/dtds/partwise.dtd">
+<score-partwise version="3.1">
+<defaults>
+<scaling>
+<millimeters>7</millimeters>
+<tenths>40</tenths>
+</scaling>
+<page-layout>
+<page-height>1760</page-height>
+<page-width>1360</page-width>
+<page-margins type="both">
+<left-margin>120</left-margin>
+<right-margin>120</right-margin>
+<top-margin>120</top-margin>
+<bottom-margin>120</bottom-margin>
+</page-margins>
+</page-layout>
+<system-layout>
+<system-margins>
+<left-margin>0</left-margin>
+<right-margin>0</right-margin>
+</system-margins>
+<system-distance>150</system-distance>
+<top-system-distance>200</top-system-distance>
+</system-layout>
+<staff-layout>
+<staff-distance>80</staff-distance>
+</staff-layout>
+</defaults>
+<credit page="1">
+<credit-words default-x="680" default-y="1600" justify="center" valign="top" font-family="Times New Roman" font-size="24" font-weight="bold">Solas - Jamie Duffy (Primera Página)</credit-words>
+</credit>
+<part-list>
+<score-part id="P1">
+<part-name>Piano</part-name>
+<score-instrument id="P1-I1">
+<instrument-name>Piano</instrument-name>
+</score-instrument>
+</score-part>
+</part-list>
+<part id="P1">
+</part>
+</score-partwise>

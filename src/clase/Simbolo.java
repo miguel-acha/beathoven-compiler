@@ -1,5 +1,4 @@
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class Simbolo {
     String idToken;
@@ -16,11 +15,12 @@ public class Simbolo {
     }
 
     public void agregarPosicion(int posicion) {
-        posiciones.add(posicion);
+        this.posiciones.add(posicion);
     }
 
     @Override
     public String toString() {
-        return String.format("%-6s | %-13s | %-20s | %s", idToken, tipoToken, valor, posiciones.toString().replaceAll("[\\[\\]]", ""));
+        return String.format("%-6s | %-13s | %-20s | %s",
+                idToken, tipoToken, valor, posiciones.toString().replaceAll("[\\[\\]]", ""));
     }
 }

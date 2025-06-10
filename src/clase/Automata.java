@@ -1,3 +1,5 @@
+package clase;
+
 import java.util.*;
 
 public class Automata {

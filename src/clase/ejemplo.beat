@@ -1,0 +1,11 @@
+TEMPO 500
+TIME 7/8
+TITLE Melodia sin comillas
+C4 Q
+REPEAT 2
+{
+D4 X
+}
+GOTO noExiste
+TEMP
+Ñ

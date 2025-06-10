@@ -1,3 +1,5 @@
+package clase;
+
 public class ErrorLexico {
     String idError;
     String tipoError;
@@ -15,6 +17,7 @@ public class ErrorLexico {
 
     @Override
     public String toString() {
-        return String.format("%-6s | %-20s | %-8d | %-35s | %s", idError, tipoError, posicion, descripcion, accion);
+        return String.format("%-6s | %-20s | %-8d | %-35s | %s",
+                idError, tipoError, posicion, descripcion, accion);
     }
 }
