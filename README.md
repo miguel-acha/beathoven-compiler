@@ -84,14 +84,3 @@ Beathoven/
 ## Author
 
 Miguel Angel Achá Boiano 
-
----
-
-👉 Summary:
-
-✅ Includes **Usage**  
-✅ Includes **Example Output**  
-✅ Includes **Project Structure**  
-✅ Includes **Requirements**  
-✅ Includes **Features**  
-✅ Ready to use in your GitHub project 🚀
