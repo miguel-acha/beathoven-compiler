@@ -46,12 +46,12 @@ E4 W
 
 ## Usage
 
-Write your music instructions in a `.mt` file.
+Write your music instructions in a `.beat` file.
 
 Run the compiler:
 
 ```bash
-java Beathoven your_song.mt
+java Beathoven your_song.beat
 ```
 
 The compiler will generate:
