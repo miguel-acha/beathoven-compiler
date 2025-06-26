@@ -14,5 +14,6 @@ public class ErrorLexico {
 
     public String toString() {
         return String.format("%-6s | %-20s | %-8d | %-35s | %s", id, tipo, linea, descripcion, sugerencia);
+
     }
 }

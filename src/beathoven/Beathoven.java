@@ -19,6 +19,7 @@ public class Beathoven {
     static String titleString = "Untitled";
     static String instrumentString = "Piano";
 
+
     static String generarIDToken() {
         return String.format("T%03d", tokenCounter++);
     }
@@ -59,7 +60,7 @@ public class Beathoven {
     }
 
     public static void main(String[] args) {
-        String rutaArchivo = "beats/ejemplo.beat";
+        String rutaArchivo = args.length > 0 ? args[0] : "beats/ejemplo.beat";
         System.out.println("Usando archivo de entrada: " + rutaArchivo);
 
         System.out.println("\nANALIZADOR LEXICO\n");
@@ -295,3 +296,4 @@ public class Beathoven {
         return row.get(token);
     }
 }
+
