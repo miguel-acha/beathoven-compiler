@@ -1,0 +1,9 @@
+grammar org.xtext.example.beathoven.Beathoven with org.eclipse.xtext.common.Terminals
+
+generate beathoven "http://www.xtext.org/example/beathoven/Beathoven"
+
+Model:
+	greetings+=Greeting*;
+	
+Greeting:
+	'Hello' name=ID '!';

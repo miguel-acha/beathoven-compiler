@@ -1,0 +1,9 @@
+grammar org.xtext.example.arithmetic.Arithmetic with org.eclipse.xtext.common.Terminals
+
+generate arithmetic "http://www.xtext.org/example/arithmetic/Arithmetic"
+
+Model:
+	greetings+=Greeting*;
+	
+Greeting:
+	'Hello' name=ID '!';

@@ -1,0 +1,28 @@
+Manifest-Version: 1.0
+Automatic-Module-Name: org.xtext.example.beathoven
+Bundle-ManifestVersion: 2
+Bundle-Name: org.xtext.example.beathoven
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: org.xtext.example.beathoven; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: org.eclipse.xtext,
+ org.eclipse.xtext.xbase,
+ org.eclipse.equinox.common;bundle-version="3.19.0",
+ org.eclipse.emf.ecore,
+ org.eclipse.xtext.xbase.lib;bundle-version="2.38.0",
+ org.eclipse.emf.common,
+ org.antlr.runtime;bundle-version="[3.2.0,3.2.1)"
+Bundle-RequiredExecutionEnvironment: JavaSE-21
+Export-Package: org.beathoven.validation,
+ org.beathoven.beathoven.impl,
+ org.beathoven.parser.antlr,
+ org.beathoven.scoping,
+ org.beathoven.parser.antlr.internal,
+ org.beathoven.generator,
+ org.beathoven.serializer,
+ org.beathoven.services,
+ org.beathoven.beathoven,
+ org.beathoven,
+ org.beathoven.beathoven.util
+Import-Package: org.apache.log4j

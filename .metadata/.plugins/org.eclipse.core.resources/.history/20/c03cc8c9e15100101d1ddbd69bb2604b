@@ -1,0 +1,37 @@
+package org.beathoven.scoping;
+
+import org.beathoven.beathoven.BeathovenPackage;
+import org.beathoven.beathoven.Mark;
+import org.beathoven.beathoven.Model;
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.xtext.scoping.impl.AbstractDeclarativeScopeProvider;
+import org.eclipse.xtext.scoping.IScope;
+import org.eclipse.xtext.scoping.Scopes;
+
+import java.util.List;
+import java.util.stream.Collectors;
+
+public class BeathovenScopeProvider extends AbstractDeclarativeScopeProvider {
+
+    // Esto define qué elementos están visibles para una referencia a "label" en un GOTO
+    public IScope scope_Goto_label(EObject context) {
+        EObject root = context;
+        while (root.eContainer() != null) {
+            root = root.eContainer();
+        }
+
+        if (root instanceof Model) {
+            Model model = (Model) root;
+            List<Mark> marks = model.getBlocks().stream()
+                .filter(b -> b instanceof Mark)
+                .map(b -> (Mark) b)
+                .collect(Collectors.toList());
+
+            return Scopes.scopeFor(marks, 
+                new org.eclipse.xtext.naming.SimpleNameProvider(), 
+                BeathovenPackage.Literals.MARK__LABEL);
+        }
+
+        return IScope.NULLSCOPE;
+    }
+}

@@ -1,0 +1,18 @@
+grammar org.xtext.example.arithmetic.Arithmetic with org.eclipse.xtext.common.Terminals
+
+generate arithmetic "http://www.xtext.org/example/arithmetic/Arithmetic"
+
+Model:
+	expr=Expression;
+	
+Expression returns Expression:
+	Addition;
+	
+Addition returns Expression:
+	Multiplication (({Plus.left=current}'+'|{Minus.left=current}'-') right=Multiplication)*;
+	
+Multiplication returns Expression:
+	Primary(({MulOrDiv.left=current} ('*'|'/') right=Primary))*;
+	
+Primary returns Expression:
+	{NumberLiteral} value =INT | '(' Expression ')';

@@ -1,0 +1,59 @@
+grammar org.beathoven.Beathoven with org.eclipse.xtext.common.Terminals
+
+generate beathoven "http://www.beathoven.org/Beathoven"
+
+Model:
+    blocks+=Block*;
+
+Block:
+    Tempo | Time | Key | Title | Instrument |
+    NoteStmt | Rest | Chord |
+    Repeat | Mark | Goto;
+
+Tempo:
+    'TEMPO' value=INT;
+
+Time:
+    'TIME' value=Fraction;
+
+Key:
+    'KEY' note=NoteValue;
+
+Title:
+    'TITLE' name=STRING;
+
+Instrument:
+    'INSTRUMENT' name=ID;
+
+NoteStmt:
+    pitch=NoteValue duration=Duration;
+
+Rest:
+    'R' duration=Duration;
+
+Chord:
+    chord='[' notes+=NoteValue (',' notes+=NoteValue)* ']' duration=Duration;
+
+Repeat:
+    'REPEAT' times=INT '{' blocks+=Block* '}';
+
+Mark:
+    'MARK' label=ID;
+
+Goto:
+    'GOTO' label=ID;
+
+NoteValue:
+    value=NOTE_TOKEN;
+
+Duration:
+    value=DUR_TOKEN;
+
+terminal NOTE_TOKEN:
+    ('A'..'G') ('#' | 'b')? ('0'..'8')?;
+
+terminal DUR_TOKEN:
+    'W' | 'H' | 'Q' | 'E' | 'S';
+
+terminal Fraction:
+    INT '/' INT;
